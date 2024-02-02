@@ -4,10 +4,14 @@ import 'package:musicappapp/model/music_model.dart';
 import 'package:musicappapp/page/my_app.dart';
 import 'package:musicappapp/nav_bar/bottom_nav_bar.dart';
 import 'package:musicappapp/nav_bar/flat_nav_bar.dart';
+import 'package:musicappapp/page/screen/bluetooth_page.dart';
+import 'package:musicappapp/page/screen/serch_page.dart';
 import 'package:musicappapp/view_model/project_view_model.dart';
 import 'package:musicappapp/widget/bottom_panel_widget.dart';
 
 import 'package:provider/provider.dart';
+
+import 'page/screen/setting_page.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -80,11 +84,10 @@ class _LandingPageState extends State<LandingPage> {
           },
           children: [
             MyApp(),
-            const Scaffold(),
-            const Scaffold(),
-            const Scaffold(),
-            const Scaffold(),
-          ],
+            SearchPage(),
+            Scaffold(),
+            BluetoothPage(),
+            SettingPage(),          ],
         ),
       ),
     );
